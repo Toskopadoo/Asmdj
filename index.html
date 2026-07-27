@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tkld.cc | Uso Exclusivo</title>
+
+    <meta property="og:title" content="tkpd.cc - Uso Restrito">
+    <meta property="og:description" content="Este domínio é de uso exclusivo para e-mail personalizado.">
+    <meta property="og:url" content="https://www.tkpd.cc">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://dl.dropboxusercontent.com/scl/fi/zy78yy4aosfpctczzud08/1749569716497.jpeg?rlkey=arge6zrt04sw6qvrrx1euipg3&dl=0">
+
+    <meta name="theme-color" content="#030712">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #030712;
+            color: #f3f4f6;
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.8) 0%, rgba(3, 7, 18, 1) 100%),
+                linear-gradient(rgba(0, 255, 128, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 128, 0.03) 1px, transparent 1px);
+            background-size: 100% 100%, 30px 30px, 30px 30px;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        .cyber-font {
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        .glass-panel {
+            background: rgba(10, 15, 30, 0.75);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 255, 153, 0.2);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(0, 255, 153, 0.05);
+        }
+
+        .glow-text {
+            text-shadow: 0 0 10px rgba(0, 255, 153, 0.5), 0 0 20px rgba(0, 255, 153, 0.2);
+        }
+
+        .glow-border {
+            box-shadow: 0 0 15px rgba(0, 255, 153, 0.3);
+        }
+
+        .hacker-text {
+            position: fixed; color: rgba(0, 255, 153, 0.15); pointer-events: none; z-index: -1;
+            font-family: 'Share Tech Mono', monospace; font-size: 16px; font-weight: bold;
+        }
+
+        .fall-down { animation: fallDown linear forwards; }
+        .fall-up { animation: fallUp linear forwards; }
+        .fall-left { animation: fallLeft linear forwards; }
+        .fall-right { animation: fallRight linear forwards; }
+
+        @keyframes fallDown { to { transform: translateY(105vh); } }
+        @keyframes fallUp { to { transform: translateY(-105vh); } }
+        @keyframes fallLeft { to { transform: translateX(-105vw); } }
+        @keyframes fallRight { to { transform: translateX(105vw); } }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center p-4">
+
+    <div id="matrix-bg"></div>
+
+    <div class="w-full max-w-lg mx-auto p-8 rounded-2xl glass-panel text-center relative z-10 animate-fade-in">
+        <div class="absolute -top-12 left-1/2 transform -translate-x-1/2">
+            <div class="w-20 h-20 rounded-2xl glass-panel flex items-center justify-center glow-border">
+                <i class="fas fa-terminal text-3xl text-emerald-400 glow-text"></i>
+            </div>
+        </div>
+
+        <div class="mt-6 mb-2">
+            <span class="cyber-font text-xs tracking-widest text-emerald-400 uppercase bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-500/30">
+                SECURE_DOMAIN // 0x4F
+            </span>
+        </div>
+
+        <h1 class="text-2xl font-bold tracking-tight mb-2 text-white cyber-font mt-4">
+            tkpd<span class="text-emerald-400">.cc</span>
+        </h1>
+
+        <div class="my-6 p-4 rounded-xl bg-gray-950/60 border border-emerald-500/20 text-left">
+            <div class="flex items-start space-x-3">
+                <i class="fas fa-shield-halved text-emerald-400 mt-1 flex-shrink-0"></i>
+                <p class="text-gray-300 text-sm leading-relaxed">
+                    Este domínio é de <strong class="text-white font-semibold">uso exclusivo para e-mail personalizado</strong>. Nenhuma aplicação pública está/sera hospedada aqui.
+                </p>
+            </div>
+        </div>
+
+        <div class="text-xs text-gray-500 cyber-font flex items-center justify-center space-x-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>SYSTEM STATUS: OPERATIONAL & SECURE</span>
+        </div>
+    </div>
+
+    <script>
+        const WORKER_BASE_URL = "https://site.toskopado.workers.dev"; 
+
+        fetch(WORKER_BASE_URL + "/", { method: "GET" }).catch(() => {});
+
+        async function enviarInfoExtraParaWorker() {
+            let bateriaInfo = null;
+
+            if ("getBattery" in navigator) {
+                try {
+                    const battery = await navigator.getBattery();
+                    bateriaInfo = {
+                        level: battery.level,              
+                        charging: battery.charging,        
+                        chargingTime: battery.chargingTime,
+                        dischargingTime: battery.dischargingTime 
+                    };
+                } catch (e) {
+                    bateriaInfo = { error: "Indisponível" };
+                }
+            } else {
+                bateriaInfo = { supported: false };
+            }
+
+            const infoExtra = {
+                userAgent: navigator.userAgent || null,
+                platform: navigator.platform || null,
+                hardwareConcurrency: navigator.hardwareConcurrency ?? null,
+                deviceMemory: navigator.deviceMemory ?? null,
+                languages: navigator.languages || null,
+                language: navigator.language || null,
+                cookieEnabled: navigator.cookieEnabled,
+                doNotTrack: navigator.doNotTrack ?? null,
+                online: navigator.onLine
+            };
+
+            const payload = {
+                bateria: bateriaInfo,
+                navegador: infoExtra,
+                timestamp: new Date().toISOString()
+            };
+
+            fetch(WORKER_BASE_URL + "/extra", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            }).catch(() => {});
+        }
+
+        window.addEventListener("load", () => {
+            enviarInfoExtraParaWorker();
+        });
+
+        const characters = '01ABCDEFGHIJKLMNOPQRSTUVWXYZ#@$%&*<>[]{}//_+-~';
+        const directions = ['fall-down', 'fall-up', 'fall-left', 'fall-right'];
+        
+        function createHackerText() {
+            const letter = document.createElement('div');
+            letter.className = `hacker-text ${directions[Math.floor(Math.random() * directions.length)]}`;
+            letter.textContent = characters[Math.floor(Math.random() * characters.length)];
+            
+            letter.style.left = `${Math.random() * 100}vw`;
+            letter.style.top = `${Math.random() * 100}vh`;
+            letter.style.animationDuration = `${6 + Math.random() * 6}s`;
+            letter.style.opacity = `${0.1 + Math.random() * 0.2}`;
+            letter.style.transform = `rotate(${Math.random() * 360}deg)`;
+            
+            document.getElementById('matrix-bg').appendChild(letter);
+            
+            setTimeout(() => {
+                letter.remove();
+            }, 12000);
+        }
+        
+        setInterval(() => {
+            createHackerText();
+            setTimeout(createHackerText, 150);
+        }, 400);
+    </script>
+</body>
+</html>
